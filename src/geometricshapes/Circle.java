@@ -47,11 +47,11 @@ public class Circle {
 	}
 
 	/**
-	 * @param r the radius of the circle, that must be non-negative
+	 * @param r the radius of the circle, that must be positive
 	 */
 	public void setR(double r) {
-		if(r < 0)
-			throw new IllegalArgumentException("The radius must be non-negative");
+		if(r <= 0)
+			throw new IllegalArgumentException("The radius must be positive");
 		else
 			this.r = r;
 	}
@@ -85,7 +85,7 @@ public class Circle {
 	}
 	
 	/**
-	 * Doea the bounding-box of this circle contains that of c?
+	 * Does the bounding-box of this circle contains that of c?
 	 * @param c
 	 * @return
 	 */
@@ -95,6 +95,19 @@ public class Circle {
 				(c.getXMax() <= this.getXMax()) &&
 				(c.getYMax() <= this.getYMax());
 	}
+	
+	/**
+	 * Does the bounding-box of this circle contains that of triangle t?
+	 * @param t
+	 * @return
+	 */
+	public boolean contains(Triangle t) {
+		return	(this.getXMin() <= t.getXMin()) &&
+				(this.getYMin() <= t.getYMin()) &&
+				(t.getXMax() <= this.getXMax()) &&
+				(t.getYMax() <= this.getYMax());
+	}
+
 
 	@Override
 	public String toString() {
