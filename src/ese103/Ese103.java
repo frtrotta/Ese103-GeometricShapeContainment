@@ -1,7 +1,5 @@
 package ese103;
 
-import java.lang.reflect.Array;
-
 import geometricshapes.*;
 
 public class Ese103 {
