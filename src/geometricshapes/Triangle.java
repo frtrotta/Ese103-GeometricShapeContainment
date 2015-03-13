@@ -6,9 +6,9 @@ public class Triangle extends GeometricShape {
 	private double l;
 	
 	public Triangle(double xV, double yV, double l) {
-		this.xV = xV;
-		this.yV = yV;
-		this.l = l;
+		this.setxV(xV);
+		this.setyV(yV);
+		this.setL(l);
 	}
 
 	/**

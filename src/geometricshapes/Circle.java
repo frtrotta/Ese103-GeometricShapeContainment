@@ -8,7 +8,10 @@ public class Circle extends GeometricShape {
 	public Circle(double xC, double yC, double r) {
 		this.xC = xC;
 		this.yC = yC;
-		this.r = r;
+		if (r <= 0)
+			throw new IllegalArgumentException("The radius must be positive");
+		else
+			this.r = r;
 	}
 
 	/**
