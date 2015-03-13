@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public class Triangle {
+public class Triangle extends GeometricShape {
 	private double xV;
 	private double yV;
 	private double l;
@@ -59,6 +59,7 @@ public class Triangle {
 	/**
 	 * @return the minimal x-coordinate of the bounding box
 	 */
+	@Override
 	public double getXMin() {
 		return this.xV;
 	}
@@ -66,6 +67,7 @@ public class Triangle {
 	/**
 	 * @return the maximal x-coordinate of the bounding box
 	 */
+	@Override
 	public double getXMax() {
 		return this.xV + this.l;
 	}
@@ -73,6 +75,7 @@ public class Triangle {
 	/**
 	 * @return the minimal y-coordinate of the bounding box
 	 */
+	@Override
 	public double getYMin() {
 		return this.yV;
 	}
@@ -80,34 +83,9 @@ public class Triangle {
 	/**
 	 * @return the maximal y-coordinate of the bounding box
 	 */
+	@Override
 	public double getYMax() {
 		return this.yV + this.l * Math.sqrt(3) / 2;
-	}
-	
-
-	
-	/**
-	 * Does the bounding-box of this triangle contains that of circle t?
-	 * @param c
-	 * @return
-	 */
-	public boolean contains(Circle c) {
-		return	(this.getXMin() <= c.getXMin()) &&
-				(this.getYMin() <= c.getYMin()) &&
-				(c.getXMax() <= this.getXMax()) &&
-				(c.getYMax() <= this.getYMax());
-	}
-	
-	/**
-	 * Does the bounding-box of this triangle contains that of t?
-	 * @param t
-	 * @return
-	 */
-	public boolean contains(Triangle t) {
-		return	(this.getXMin() <= t.getXMin()) &&
-				(this.getYMin() <= t.getYMin()) &&
-				(t.getXMax() <= this.getXMax()) &&
-				(t.getYMax() <= this.getYMax());
 	}
 
 	/* (non-Javadoc)

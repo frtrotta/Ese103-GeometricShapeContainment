@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public class Circle {
+public class Circle extends GeometricShape {
 	private double xC;
 	private double yC;
 	private double r;
@@ -59,6 +59,7 @@ public class Circle {
 	/**
 	 * @return the minimal x-coordinate of the bounding box
 	 */
+	@Override
 	public double getXMin() {
 		return this.xC - this.r;
 	}
@@ -66,6 +67,7 @@ public class Circle {
 	/**
 	 * @return the maximal x-coordinate of the bounding box
 	 */
+	@Override
 	public double getXMax() {
 		return this.xC + this.r;
 	}
@@ -73,6 +75,7 @@ public class Circle {
 	/**
 	 * @return the minimal y-coordinate of the bounding box
 	 */
+	@Override
 	public double getYMin() {
 		return this.yC - this.r;
 	}
@@ -80,40 +83,22 @@ public class Circle {
 	/**
 	 * @return the maximal y-coordinate of the bounding box
 	 */
+	@Override
 	public double getYMax() {
 		return this.yC + this.r;
 	}
-	
-	/**
-	 * Does the bounding-box of this circle contains that of c?
-	 * @param c
-	 * @return
-	 */
-	public boolean contains(Circle c) {
-		return	(this.getXMin() <= c.getXMin()) &&
-				(this.getYMin() <= c.getYMin()) &&
-				(c.getXMax() <= this.getXMax()) &&
-				(c.getYMax() <= this.getYMax());
-	}
-	
-	/**
-	 * Does the bounding-box of this circle contains that of triangle t?
-	 * @param t
-	 * @return
-	 */
-	public boolean contains(Triangle t) {
-		return	(this.getXMin() <= t.getXMin()) &&
-				(this.getYMin() <= t.getYMin()) &&
-				(t.getXMax() <= this.getXMax()) &&
-				(t.getYMax() <= this.getYMax());
-	}
 
-
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "Circle [xC=" + xC + ", yC=" + yC + ", r=" + r + "]";
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -128,6 +113,9 @@ public class Circle {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
