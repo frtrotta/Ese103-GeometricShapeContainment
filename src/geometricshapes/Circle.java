@@ -47,11 +47,11 @@ public class Circle {
 	}
 
 	/**
-	 * @param r the radius of the circle, that must be non-negative
+	 * @param r the radius of the circle, that must be positive
 	 */
 	public void setR(double r) {
-		if(r < 0)
-			throw new IllegalArgumentException("The radius must be non-negative");
+		if(r <= 0)
+			throw new IllegalArgumentException("The radius must be positive");
 		else
 			this.r = r;
 	}
@@ -85,7 +85,7 @@ public class Circle {
 	}
 	
 	/**
-	 * Doea the bounding-box of this circle contains that of c?
+	 * Does the bounding-box of this circle contains that of c?
 	 * @param c
 	 * @return
 	 */
