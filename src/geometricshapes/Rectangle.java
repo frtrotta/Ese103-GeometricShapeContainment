@@ -25,42 +25,42 @@ public class Rectangle extends GeometricShape {
 	/**
 	 * @return the the x-coordinate of the bottom left vertex
 	 */
-	public double getxV() {
+	public double getXV() {
 		return xV;
 	}
 
 	/**
 	 * @param xV the x-coordinate of the bottom left vertex
 	 */
-	public void setxV(double xV) {
+	public void setXV(double xV) {
 		this.xV = xV;
 	}
 
 	/**
 	 * @return the the y-coordinate of the bottom left vertex
 	 */
-	public double getyV() {
+	public double getYV() {
 		return yV;
 	}
 
 	/**
 	 * @param yV the y-coordinate of the bottom left vertex
 	 */
-	public void setyV(double yV) {
+	public void setYV(double yV) {
 		this.yV = yV;
 	}
 
 	/**
 	 * @return the length of the side parallel to the x-axis
 	 */
-	public double getxSideLength() {
+	public double getXSideLength() {
 		return xSideLength;
 	}
 
 	/**
 	 * @param xSideLength the length of the side parallel to the x-axis, that must be positive
 	 */
-	public void setxSideLength(double xSideLength) {
+	public void setXSideLength(double xSideLength) {
 		if(xSideLength <= 0)
 			throw new IllegalArgumentException("The length of the side parallel to the x-axis must be positive");
 		else
@@ -70,14 +70,14 @@ public class Rectangle extends GeometricShape {
 	/**
 	 * @return the length of the side parallel to the y-axis
 	 */
-	public double getySideLength() {
+	public double getYSideLength() {
 		return ySideLength;
 	}
 
 	/**
 	 * @param ySideLength the length of the side parallel to the y-axis, that must be positive
 	 */
-	public void setySideLength(double ySideLength) {
+	public void setYSideLength(double ySideLength) {
 		if(ySideLength <= 0)
 			throw new IllegalArgumentException("The length of the side parallel to the y-axis must be positive");
 		else

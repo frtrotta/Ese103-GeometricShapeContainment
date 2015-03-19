@@ -2,6 +2,9 @@ package geometricshapes;
 
 public class Square extends Rectangle {
 	public Square(double xV, double yV, double l) {
+		/* Il costruttore della classe derivata richiama il costruttore
+		 * della classe padre, impostando opportunamente i valori.
+		 */
 		super(xV, yV, l, l);
 	}
 	
@@ -9,8 +12,8 @@ public class Square extends Rectangle {
 	 * @param l the length of the sides
 	 */
 	public void setL(double l) {
-		this.setxSideLength(l);
-		this.setySideLength(l);
+		this.setXSideLength(l);
+		this.setYSideLength(l);
 	}
 	
 	/**
@@ -24,7 +27,7 @@ public class Square extends Rectangle {
 	 * @param l
 	 */
 	@Override
-	public void setxSideLength(double l) {
+	public void setXSideLength(double l) {
 		/* NOTA
 		 * E' necessario ridefinire il metodo pubblico della superclasse
 		 * affinchè sia garantita la consistenza dello stato.
@@ -44,7 +47,7 @@ public class Square extends Rectangle {
 	 * @param l
 	 */
 	@Override
-	public void setySideLength(double l) {
+	public void setYSideLength(double l) {
 		/* NOTA
 		 * E' necessario ridefinire il metodo pubblico della superclasse
 		 * affinchè sia garantita la consistenza dello stato.

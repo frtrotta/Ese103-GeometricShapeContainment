@@ -6,36 +6,36 @@ public class Triangle extends GeometricShape {
 	private double l;
 	
 	public Triangle(double xV, double yV, double l) {
-		this.setxV(xV);
-		this.setyV(yV);
+		this.setXV(xV);
+		this.setYV(yV);
 		this.setL(l);
 	}
 
 	/**
 	 * @return the the x-coordinate of the bottom left vertex
 	 */
-	public double getxV() {
+	public double getXV() {
 		return xV;
 	}
 
 	/**
 	 * @param xV the x-coordinate of the bottom left vertex
 	 */
-	public void setxV(double xV) {
+	public void setXV(double xV) {
 		this.xV = xV;
 	}
 
 	/**
 	 * @return the the y-coordinate of the bottom left vertex
 	 */
-	public double getyV() {
+	public double getYV() {
 		return yV;
 	}
 
 	/**
 	 * @param yV the y-coordinate of the bottom left vertex
 	 */
-	public void setyV(double yV) {
+	public void setYV(double yV) {
 		this.yV = yV;
 	}
 
