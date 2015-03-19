@@ -8,34 +8,36 @@ public class Triangle extends GeometricShape {
 	public Triangle(double xV, double yV, double l) {
 		this.xV = xV;
 		this.yV = yV;
+		if(l <= 0)
+			throw new IllegalArgumentException("The length of the side must be positive");
 		this.l = l;
 	}
 
 	/**
 	 * @return the the x-coordinate of the bottom left vertex
 	 */
-	public double getxV() {
+	public double getXV() {
 		return xV;
 	}
 
 	/**
 	 * @param xV the x-coordinate of the bottom left vertex
 	 */
-	public void setxV(double xV) {
+	public void setXV(double xV) {
 		this.xV = xV;
 	}
 
 	/**
 	 * @return the the y-coordinate of the bottom left vertex
 	 */
-	public double getyV() {
+	public double getYV() {
 		return yV;
 	}
 
 	/**
 	 * @param yV the y-coordinate of the bottom left vertex
 	 */
-	public void setyV(double yV) {
+	public void setYV(double yV) {
 		this.yV = yV;
 	}
 

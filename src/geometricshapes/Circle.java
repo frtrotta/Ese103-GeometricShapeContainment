@@ -8,34 +8,36 @@ public class Circle extends GeometricShape {
 	public Circle(double xC, double yC, double r) {
 		this.xC = xC;
 		this.yC = yC;
+		if(r <= 0)
+			throw new IllegalArgumentException("The radius must be positive");
 		this.r = r;
 	}
 
 	/**
 	 * @return the x-coordinate of the center
 	 */
-	public double getxC() {
+	public double getXC() {
 		return xC;
 	}
 
 	/**
 	 * @param xC the x-coordinate of the center
 	 */
-	public void setxC(double xC) {
+	public void setXC(double xC) {
 		this.xC = xC;
 	}
 
 	/**
 	 * @return the y-coordinate of the center
 	 */
-	public double getyC() {
+	public double getYC() {
 		return yC;
 	}
 
 	/**
 	 * @param yC the y-coordinate of the center
 	 */
-	public void setyC(double yC) {
+	public void setYC(double yC) {
 		this.yC = yC;
 	}
 
