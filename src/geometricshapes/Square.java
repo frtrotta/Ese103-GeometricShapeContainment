@@ -13,7 +13,17 @@ public class Square extends Rectangle {
 	 */
 	public void setL(double l) {
 		this.setXSideLength(l);
-		this.setYSideLength(l);
+		/* Viene invocato il metodo setXSideLength (ri)definito da Square,
+		 * che garantisce la coerenza dello stato.
+		 * 
+		 * Un'implementazione alternativa, ma ugualmente corretta, sarebbe potuta essere
+		 * super.setXSideLength()
+		 * super.setYSideLength()
+		 * 
+		 * In questo caso i metodi richiamati sarebbero stati quelli della classe padre,
+		 * per cui sarebbe stato necessario invocarli entrambi, onde garantire la coerenza
+		 * dello stato.
+		 */
 	}
 	
 	/**

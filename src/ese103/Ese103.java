@@ -13,6 +13,8 @@ public class Ese103 {
 		
 		testRectangle();
 		
+		testSquare();
+		
 		//-------------------------------------------------------------------------------
 		// Verifica di contains
 
@@ -210,6 +212,82 @@ public class Ese103 {
 		try {
 			r.setYSideLength(-1);
 			throw new Exception("Errore nell'implementazione di setYSideLength");
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println("superata");
+		}
+	}
+	
+	private static void testSquare() throws Exception {
+		Square s;
+		System.out.println("\n==> Verifica Square");
+		// Verifica di Costruttore Rectangle
+		System.out.print("31: Verifica implementazione costruttore di Square...");
+		try {
+			s = new Square(0, 0, 0);
+			// Se viene eseguita l'istruzione successiva, non è stata lanciata l'eccezione
+			// per il raggio non positivo. L'implementazione sarebbe errata.
+			throw new Exception("Errore nell'implementazione di Costruttore");
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println("superata");
+		}
+		
+				
+		// Verifica di Costruttore e Getter
+		System.out.print("32: Verifica implementazione Costruttore e Getter di Square...");
+		s = new Square(5, 6, 7);
+		if(s.getXV() != 5)
+			throw new Exception("Errore nell'implementazione di getXV o Costruttore");
+		if(s.getYV() != 6)
+			throw new Exception("Errore nell'implementazione di getYV o Costruttore");
+		if(s.getL() != 7)
+			throw new Exception("Errore nell'implementazione di getL o Costruttore");
+		if(s.getYSideLength() != s.getXSideLength())
+			throw new Exception("Errore nell'implementazione di getYSideLength, getYSideLength o Costruttore");
+		if(s.getYSideLength() != 7)
+			throw new Exception("Errore nell'implementazione di setYSideLength, getYSideLength o Costruttore");
+		System.out.println("superata");
+		
+		// Verifica di Setter
+		System.out.print("33: Verifica implementazione Setter di Rectangle...");
+		s.setXV(10);
+		s.setYV(11);
+		s.setL(12);
+		if(s.getXV() != 10)
+			throw new Exception("Errore nell'implementazione di setXV");
+		if(s.getYV() != 11)
+			throw new Exception("Errore nell'implementazione di setYV");
+		if(s.getL() != 12)
+			throw new Exception("Errore nell'implementazione di setL");
+		if(s.getYSideLength() != s.getXSideLength())
+			throw new Exception("Errore nell'implementazione di setYSideLength o setYSideLength");
+		if(s.getYSideLength() != 12)
+			throw new Exception("Errore nell'implementazione di setYSideLength o setYSideLength");
+		System.out.println("superata");
+		
+		System.out.print("34: Verifica implementazione setL di Square...");
+		try {
+			s.setL(-1);
+			throw new Exception("Errore nell'implementazione di setL");
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println("superata");
+		}
+		
+		System.out.print("35: Verifica implementazione setYSideLength di Square...");
+		try {
+			s.setYSideLength(-1);
+			throw new Exception("Errore nell'implementazione di setYSideLength");
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println("superata");
+		}
+		
+		System.out.print("36: Verifica implementazione setXSideLength di Square...");
+		try {
+			s.setXSideLength(-1);
+			throw new Exception("Errore nell'implementazione di setXSideLength");
 		}
 		catch(IllegalArgumentException e) {
 			System.out.println("superata");
