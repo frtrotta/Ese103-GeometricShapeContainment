@@ -30,7 +30,7 @@ public class Square extends Rectangle {
 	 * @return the length of the sides
 	 */
 	public double getL() {
-		return this.xSideLength;
+		return this.getXSideLength();
 	}
 	/**
 	 * Sets the legnth of both the sides to l
@@ -47,8 +47,8 @@ public class Square extends Rectangle {
 		if(l <= 0)
 			throw new IllegalArgumentException("The length of the side must be positive");
 		else {
-			this.xSideLength = l;
-			this.ySideLength = l;
+			super.setXSideLength(l);
+			super.setYSideLength(l);
 		}
 	}
 	
@@ -67,8 +67,8 @@ public class Square extends Rectangle {
 		if(l <= 0)
 			throw new IllegalArgumentException("The length of the side must be positive");
 		else {
-			this.xSideLength = l;
-			this.ySideLength = l;
+			super.setXSideLength(l);
+			super.setYSideLength(l);
 		}
 	}
 
@@ -77,7 +77,7 @@ public class Square extends Rectangle {
 	 */
 	@Override
 	public String toString() {
-		return "Square [xV=" + xV + ", yV=" + yV + ", l="
-				+ xSideLength + "]";
+		return "Square [xV=" + this.getXV() + ", yV=" + this.getXV() + ", l="
+				+ this.getL() + "]";
 	}
 }
